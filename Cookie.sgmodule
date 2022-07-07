@@ -1,5 +1,5 @@
 #!name=获取Cookie
-#!desc=最后更新时间 2022-07-07 22:02
+#!desc=最后更新时间 2022-07-07 23:02
 #!system=ios
 
 [Script]
@@ -7,135 +7,69 @@
 # > 网易云音乐 
 #登录1 https://music.163.com/m/login
 #登录2 https://music.163.com/#/user/level
-网易音乐 = type=http-request,
-pattern=^https:\/\/music.163.com\/weapi\/user\/level,
-requires-body=1,
-max-size=0,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js,
-script-update-interval=0
+网易云音乐Cookie = type=http-request,pattern=^https:\/\/music.163.com\/weapi\/user\/level,requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js
 
 # > 喜马拉雅 app获取
-喜马拉雅 = type=http-request,
-pattern=^https?:\/\/.*\/mobile\-user\/v2\/homePage\/.*,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
+喜马拉雅Cookie = type=http-request,pattern=^https?:\/\/.*\/mobile\-user\/v2\/homePage\/.*,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ximalaya/ximalaya.cookie.js
 
 # > 电信组件 天翼账号中心获取
-中国电信 = type=http-request,
-pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do,
-script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
+中国电信Cookie = type=http-request,pattern=^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/backup/telecomSky.js
 
 # > 美团 app获取
-美团获取 =type=http-request, 
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,
-requires-body=true,
-pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
+美团Cookie =type=http-request,requires-body=true,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js
 
 # > 微博推送 登陆 https://m.weibo.cn获取
-微博推送 = type=http-request,
-pattern=^https:\/\/m\.weibo\.cn\/feed\/,
-script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
+微博Cookie = type=http-request,pattern=^https:\/\/m\.weibo\.cn\/feed\/,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js
 
 # > 网易新闻 app获取
-网易新闻 = type=http-request,
-pattern=^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit,
-requires-body=1,
-max-size=0,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js,
-script-update-interval=0
+网易新闻Cookie = type=http-request,pattern=^https:\/\/(.*?)c\.m\.163\.com\/uc\/api\/sign\/v3\/commit,requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js
 
 # > 什么值得买 浏览器 https://zhiyou.smzdm.com/
-什么值买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,
-type=http-request,
-requires-body=true,
-pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$
+什么值得买Cookie = type=http-request,requires-body=true,pattern=^https?:\/\/zhiyou\.smzdm\.com\/user$,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js
 
 # > IT之家 app获取
-数码之家 = type=http-request,
-pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js,
-debug=true
+数码之家Cookie = type=http-request,pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?,debug=true,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js
 
 # > 联通组件ck app点流量
-联通组件 = type=http-request,
-pattern=^https:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommon,
-requires-body=1,
-max-size=0,
-script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js,
-script-update-interval=0
+联通组件Cookie = type=http-request,pattern=^https:\/\/m\.client\.10010\.com\/serviceimportantbusiness\/smart\/smartwisdomCommon,requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/dompling/Script/master/10010/index.js
 
 # > 联通签到+抽奖 app获取
-联通签到 = type=http-request,
-pattern=^https?:\/\/(act.10010.com|m.client.10010.com)\/(SigninApp|SigninApp(.*?)|dailylottery)\/(signin|static)\/querySigninActivity.htm|daySign\/(textdl\/userLogin|active\/findActivityInfo),
-requires-body=1,
-max-size=0,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js,
-script-update-interval=0
+联通签到Cookie = type=http-request,pattern=^https?:\/\/(act.10010.com|m.client.10010.com)\/(SigninApp|SigninApp(.*?)|dailylottery)\/(signin|static)\/querySigninActivity.htm|daySign\/(textdl\/userLogin|active\/findActivityInfo),requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 
 # > 顺丰速运 app获取
-顺丰速运 = type=http-request,
-pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js,
-requires-body=true
+顺丰速运Cookie = type=http-request,pattern=^https:\/\/ccsp-egmas.sf-express.com\/cx-app-member\/member\/app\/user\/universalSign,requires-body=true,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.cookie.js
 
 # > 电信签到 app获取（boxjs填写号码）
-电信签到 = type=http-request,
-pattern=^https:\/\/wapside.189.cn:9001\/jt-sign\/api\/home\/homeInfo,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js,
-requires-body=true
+电信签到Cookie = type=http-request,pattern=^https:\/\/wapside.189.cn:9001\/jt-sign\/api\/home\/homeInfo,requires-body=true,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/10000/10000.cookie.js
 
 # > 慢慢买 app获取
-慢买获取 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js,
-type=http-request,
-requires-body=true,
-pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx)
+慢慢买Cookie = type=http-request,requires-body=true,pattern=^https?:\/\/apph5\.manmanbuy\.com\/taolijin\/(login.aspx|logserver.aspx),script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/manmanbuy/manmanbuy_checkin.js
 
 # > 小米运动 app登陆时获取
-小米运动 = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, 
-requires-body=1, 
-max-size=0, 
-script-path=https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js
+小米运动Cookie = type=http-response,pattern=^https:\/\/account\.huami\.com\/v2\/client\/login, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/githubdulong/Script/master/xmSports.js
 
 # > 哔哩哔哩 登陆 https://www.bilibili.com/
-哔哩哔哩 = type=http-request,
-pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,
-requires-body=1,
-max-size=0,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,
-script-update-interval=0
-哔哩漫画 = type=http-request,
-pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5),
-script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
+哔哩哔哩Cookie = type=http-request,pattern=^https:\/\/(www|live)\.bilibili\.com\/?.?,requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js
+
+哔哩漫画Cookie = type=http-request,pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
 
 # > 伊利乳品 小程序获取
-伊利乳品 = type=http-request, 
-requires-body=1, 
-pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,
-script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+伊利乳品Cookie = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
 
 # > 威锋论坛 app获取
-威锋论坛 = type=http-request,
-pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,
-script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js,
-requires-body=true
+威锋论坛 = type=http-request,pattern=^https?:\/\/api.wfdata.club\/v1\/auth\/signin,requires-body=true,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/feng/feng.cookie.js
 
 # > 爱奇艺 登陆 https://m.iqiyi.com/user.html
-奇艺获取 = type=http-request,
-pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,
-script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+爱奇艺Cookie = type=http-request,pattern=^https:\/\/passport\.iqiyi\.com\/apis\/user\/,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 # > 吾爱破解 登陆 https://www.52pojie.cn/home.php
-吾爱获取 = type=http-request,
-pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,
-script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
+吾爱破解Cookie = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
 # > 京东
-京东签到 = type=http-request,
-requires-body=1,
-pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),
-script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+京东签到Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 # > 快看漫画
-快看漫画 = type=http-request,pattern=https:\/\/api\.kkmh\.com\/v\d\/passport\/user,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
+快看漫画Cookie = type=http-request,pattern=https:\/\/api\.kkmh\.com\/v\d\/passport\/user,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
 
 [MITM]
 hostname = %INSERT% music.163.com, 113.96.156.178, *.ximalaya.com, e.189.cn, i.meituan.com, m.weibo.cn, *.m.163.com, zhiyou.smzdm.com, my.ruanmei.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, apph5.manmanbuy.com, account.huami.com, *.bilibili.com,club.yili.com,passport.biligame.com, api.wfdata.club, passport.iqiyi.com, www.52pojie.cn,api.m.jd.com, ms.jr.jd.com, me-api.jd.com,api.kkmh.com
