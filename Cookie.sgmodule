@@ -131,7 +131,6 @@ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-Daily
 
 [MITM]
 hostname = %INSERT% music.163.com, 
-113.96.156.178, 
 *.ximalaya.com, 
 e.189.cn, 
 i.meituan.com, 
