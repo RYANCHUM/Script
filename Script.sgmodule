@@ -194,6 +194,9 @@ vsco解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/s
 奈飞查询 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/nf_check.js, argument=title=𝗡𝗘𝗧𝗙𝗟𝗜𝗫
 代理选择 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js, argument=icon=bolt.circle&color=#157EFB&group=𝗣𝗥𝗢𝗫𝗬
 
+酷我解锁 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js, type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
+微信去广告 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
+
 # > 模块订阅(单独添加)
 //爬虫复写去广告 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Surge/Advertising/Advertising.sgmodule
 //什么值得买去广告 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.sgmodule
