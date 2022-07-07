@@ -43,11 +43,6 @@ max-size=0,
 script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasenews/neteasenews.cookie.js,
 script-update-interval=0
 
-# > 百度贴吧 app获取
-百度贴吧 = type=http-request,
-pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/login,
-script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_checkin.js
-
 # > 什么值得买 浏览器 https://zhiyou.smzdm.com/
 什么值买 = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_signin.js,
 type=http-request,
@@ -107,6 +102,9 @@ requires-body=1,
 max-size=0,
 script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js,
 script-update-interval=0
+哔哩漫画 = type=http-request,
+pattern=^https:\/\/passport\.biligame\.com\/api\/login\/sso.+?version%22%3A%22(3|4|5),
+script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Bilibili-DailyBonus/Manga.js
 
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request, 
@@ -130,7 +128,17 @@ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBo
 pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,
 script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 
-# 分割线——————————————————————————
+# > 京东
+京东签到 = type=http-request,
+requires-body=1,
+pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),
+script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+# > 快看漫画
+快看漫画 = type=http-request,
+pattern=https:\/\/api\.kkmh\.com\/v\d\/passport\/user,
+script-path=https://raw.githubusercontent.com/NobyDa/Script/master/KuaiKan-DailyBonus/KKMH.js
+
 
 [MITM]
-hostname = %INSERT% music.163.com, 113.96.156.178, *.ximalaya.com, e.189.cn, i.meituan.com, m.weibo.cn, *.m.163.com, c.tieba.baidu.com, *.xxjjappss.com,*.*.mob.com,*.huaerdadi.com, zhiyou.smzdm.com, account.huami.com, my.ruanmei.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, apph5.manmanbuy.com, account.huami.com, club.yili.com, *.bilibili.com, api.wfdata.club, passport.iqiyi.com, www.52pojie.cn
+hostname = %INSERT% music.163.com, 113.96.156.178, *.ximalaya.com, e.189.cn, i.meituan.com, m.weibo.cn, *.m.163.com, zhiyou.smzdm.com, my.ruanmei.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, apph5.manmanbuy.com, account.huami.com, *.bilibili.com,club.yili.com,passport.biligame.com, api.wfdata.club, passport.iqiyi.com, www.52pojie.cn,api.m.jd.com, ms.jr.jd.com, me-api.jd.com,api.kkmh.com
