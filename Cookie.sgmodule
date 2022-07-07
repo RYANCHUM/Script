@@ -77,5 +77,11 @@ Fa米家Cookie = type=http-request,pattern=^https?:\/\/fmapp\.chinafamilymart\.c
 # > 饿了么
 饿了么cookie = type=http-request,pattern=^https?:\/\/h5\.ele\.me\/restapi\/biz\.svip_scene\/svip\/engine\/queryTrafficSupply,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/eleme/eleme_daily.js
 
+# > 叮咚买菜
+叮咚买菜Cookie = type=http-request,pattern=^https?:\/\/maicai\.api\.ddxq\.mobi\/point\/home\?api_version,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/dingdong/dingdong_checkin.js
+
+# > 美团买菜
+美团买菜Cookie = type=http-request,pattern=^https?:\/\/mall\.meituan\.com\/api\/c\/mallcoin\/checkIn\/getWeekCheckInProgressBar\?,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/meituan/maicai_checkin.js
+
 [MITM]
-hostname = %INSERT% music.163.com, 113.96.156.178, *.ximalaya.com, e.189.cn, i.meituan.com, m.weibo.cn, *.m.163.com, zhiyou.smzdm.com, my.ruanmei.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, apph5.manmanbuy.com, account.huami.com, *.bilibili.com,club.yili.com,passport.biligame.com, api.wfdata.club, passport.iqiyi.com, www.52pojie.cn,api.m.jd.com, ms.jr.jd.com, me-api.jd.com,api.kkmh.com,fmapp.chinafamilymart.com.cn,h5.ele.me
+hostname = %INSERT% music.163.com, 113.96.156.178, *.ximalaya.com, e.189.cn, i.meituan.com, m.weibo.cn, *.m.163.com, zhiyou.smzdm.com, my.ruanmei.com, m.client.10010.com, act.10010.com, ccsp-egmas.sf-express.com, wapside.189.cn:9001, apph5.manmanbuy.com, account.huami.com, *.bilibili.com,club.yili.com,passport.biligame.com, api.wfdata.club, passport.iqiyi.com, www.52pojie.cn,api.m.jd.com, ms.jr.jd.com, me-api.jd.com,api.kkmh.com,fmapp.chinafamilymart.com.cn,h5.ele.me,maicai.api.ddxq.mobi,mall.meituan.com
