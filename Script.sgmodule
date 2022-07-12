@@ -1,5 +1,5 @@
 #!name=解锁去广告
-#!desc=最后更新时间 2022-07-07 23:02
+#!desc=最后更新时间 2022-07-12 18:02
 #!system=ios
 
 [General]
@@ -100,12 +100,6 @@ URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
 
 [URL Rewrite]
 
-# > TikTok 换区
-(更换307前面JP JP=日本 KR=韩国 HK=香港 US=美国）
-(?<=&mcc_mnc=)4 2 307
-(?<=_region=)CN(?=&) JP 307
-(^https?:\/\/*\.\w{4}okv.com\/.+&.+)(\d{2}\.3\.\d)(.+) $118.0$3 302
-^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
 
 
 [Panel]
@@ -113,7 +107,6 @@ URL-REGEX,^https:\/\/api\.zuihuimai\.com,REJECT
 # > Panel
 策略面板 = script-name=功能开关, update-interval=15
 策略面板 = script-name=奈飞查询,update-interval=-1
-策略面板 = script-name=代理选择,update-interval=360
 
 
 
@@ -186,13 +179,10 @@ vsco解锁 = type=http-response,pattern=^https:\/\/(api\.revenuecat\.com\/v\d\/s
 
 # > xmind思维导图 解锁
 思维导图 = type=http-response,pattern=https?:\/\/.*\.xmind\..*\/_res\/(devices|user_sub_status|appstore/sub),requires-body=1,max-size=0,script-update-interval=0,script-path=https://raw.githubusercontent.com/langkhach270389/Surge-LK/main/scripts/langkhach/xmind.js
-# > 机场信息 
-机场信息 = type=http-request,pattern=http://sub\.info, script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info.js
 
 # > 策略面板
 功能开关 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/functionstatus.js
 奈飞查询 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/nf_check.js, argument=title=𝗡𝗘𝗧𝗙𝗟𝗜𝗫
-代理选择 = type=generic,timeout=15,script-path=https://raw.githubusercontent.com/fishingworld/something/main/groupPanel.js, argument=icon=bolt.circle&color=#157EFB&group=𝗣𝗥𝗢𝗫𝗬
 
 酷我解锁 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Kuwo.js, type=http-response,pattern=^https?:\/\/vip1\.kuwo\.cn\/(vip\/v2\/user\/vip|vip\/spi/mservice)
 微信去广告 = requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/Wechat.js, type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad
